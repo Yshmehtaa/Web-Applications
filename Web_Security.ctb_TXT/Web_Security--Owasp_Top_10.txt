@@ -1,0 +1,189 @@
+## Owasp Top 10
+https://owasp.org/www-project-top-ten/ 
+https://owasp.org/Top10/ 
+https://cheatsheetseries.owasp.org/IndexTopTen.html 
+
+• The Open Web Application Security Project (OWASP)
+It's been updated every 3 to 4 years
+
+
+
+
+• OWASP TOP 10 (2021) : LIST 
+1. Broken Access Control      (Port swigger:https://portswigger.net/web-security/access-control, )
+2. Cryptograhic Failures 
+3. Injection                         (Port swigger:https://portswigger.net/web-security/sql-injection, https://portswigger.net/web-security/os-command-injection, https://www.youtube.com/playlist?list=PLuyTk2_mYISLaZC4fVqDuW_hOk0dd5rlf)
+4. Insecure Design (new)
+5. Secuirty Misconfiguration 
+6. Vulnerable and Outdated Components 
+7. Identification and Authentication Failures 
+8. Software and Data Integrity Failures  (new)
+9. Secuirty Logging and Montoring Failures 
+10. Server-Side Request Forgery (SSRF)     (new)         (Port swigger:https://portswigger.net/web-security/ssrf, https://www.youtube.com/playlist?list=PLuyTk2_mYISIlDtWBIqmgJgn6CYlzHVsQ)
+
+
+• What's changed in the Top 10 for 2021
+There are three new categories, four categories with naming and scoping changes, and some consolidation in the Top 10 for 2021. We've changed names when necessary to focus on the root cause over the symptom. 
+ 
+☐  3 new categories 
+☐  4 categories with names and scoping changes with collaboration 
+
+☐ New Categories 
+4: Insecure Design 
+8: Software and Data Integrity Problems 
+10: Server side request forgery (SSRF) 
+
+☐ Remains the same but with collaboration
+1. Broken Access Control 
+3. Injection (xss added)
+5. Security misconfiguration (xxe added)
+
+☐ Names changing and the Scope
+2. Cryptographic Failures (prev. sensitive data exposure)
+6. Vulnerable and outdated components (prev. using components with known vulnerabilites)
+7. Identification and Authentication failures (prev. broken authentication)
+9. Security logging and monitoring failures (prev. insufficient logging and monitoring)
+
+1. A01:2021-Broken Access Control moves up from the fifth position to the category with the most serious web application security risk.
+2. A02:2021-Cryptographic Failures shifts up one position to #2, previously known as A3:2017-Sensitive Data Exposure, which was broad symptom rather than a root cause.
+3. A03:2021-Injection slides down to the 3rd position.A7:2017-CROSS-SITE SCRIPTING (XSS)  is now part of this category in this edition.
+4. A04:2021-Insecure Design (NEW). we need more threat modeling, secure design patterns and principles, and reference architectures. An insecure design cannot be fixed by a perfect implementation as by definition, needed security controls were never created to defend against specific attacks.
+5. A05:2021-Security Misconfiguration moves up from #6 in the previous edition.A4:2017-XML External Entities (XXE) is now part of this risk category.
+6. A06:2021-Vulnerable and Outdated Components was previously titled A9:2017-Using Components with Known Vulnerabilities It is the only category not to have any (CVEs) mapped to the included CWEs.
+7. A07:2021-Identification and Authentication Failures was previously A2:2017-Broken Authentication and is sliding down from the second position.
+8. A08:2021-Software and Data Integrity Failures (NEW). focusing on making assumptions related to software updates, critical data, and CI/CD pipelines without verifying integrity.One of the highest weighted impacts from (CVE/CVSS) data mapped to the 10 CWEs in this category. A8:2017-Insecure Deserialization is now a part of this larger category. 
+9. A09:2021-Security Logging and Monitoring Failures was previously A10:2017-Insufficient Logging & Monitoring. failures in this category can directly impact visibility, incident alerting, and forensics.
+10. A10:2021-Server-Side Request Forgery (NEW). 
+
+• Detailed
+
+1. Broken Access Control- 
+ This exposure occurs when confidential info is viewed by a user who should not have permission to access that data. 
+• Access Conrol- 
+ Making sure that people have access to what they're suppose to and what they're not. Broken access control is exactly opp.  
+
+2. Cryptographic Failures- 
+ The first thing is to determine the protection needs to data in transit and at a rest. for example, passwords, credit card no's, health records, personal info, and bussiness secrets req extra protection. 
+ 
+☐ Part 1 
+• Think about the data that's being collected, stored and used. 
+• More sensitive, restricted, regulated, or private data needs to be more protected. 
+• Encrypt data to protect it. 
+
+☐ Part 2 
+• Follow well-known, proven procedures to ensure data is encrypted effectively. 
+
+Key take-aways:
+1. If you don't have to store the sensitive data, don't do it. 
+2. If you're storing sensitive data, encrypt it at rest and at transit. 
+3. if you're encrypting data, use well-known, strong cryptographic algorithms.
+for eg, don't use MD5, instead use AES which is a strong algorithm. 
+
+3.Injection-
+ Code can either represent as data or an instruction. 
+Injection happens when an application data as input and process it as instruction. 
+
+Occcurence- 
+• when there is an oppurtunity for a user to provide input 
+• Application handles that input incorrectly 
+• Bad actor could inject malicious code that ends up being interpreted as intruction. 
+
+examples are XSS, SQLi 
+When an attacker manages to insert or change the sql query by adding sql characters or sql code in an input vector of application then that application is definetily vulnerable to Sql injection.
+Key-take-aways:
+• You need to neutralize or verify 	user input in your web applications 
+
+4.Insecure Design- 
+A new category focusing on risks related to design and architectural flaws. 
+All the categories focuses on code level- bug type vulnerability and not in design level-flaw type vulnerability. 
+
+examples are Sensitive Information in Error Message,  passwords are stored in plain text.  	
+  
+Key-take-aways:
+• Security matters not only in development and producion, but design as well. 
+• consult with secuirty experts to ensure appropriate requirements and design decisions are being made early on. 
+
+5.Security Misconfiguration-
+The application may be vulnerable if the application is without a concerted, repeatable application security configuration process. 
+
+example, default set-up that is not much secure. 
+
+Pysical Security Misconfiguration-
+   ◇ leaving your house and forgetting to lock the door. 
+   ◇ Driving a car and not buckling your seatbelt. 
+   
+Digital or Web App Security Misconfiguration-
+• Not using a password on your mobile device. 
+• Failing to change the default passwords. 
+• Enabling unnessary services or features
+• insecure configuring cloud permission services
+• failing to update software
+ 
+It can be both Failure to change the default passwords, failure to use the strong passwords. 
+
+Key-take-aways:
+•  identify and evaluate each setting or configuration for security
+• use center for internet secuirty (CIS) guidelines 
+• In reality, address your unique organizational risk tolerance and requirements.
+
+6.Vulnerable and Outdated Components-
+"You're likely vulnerable: if you don't know all the versions of all the components you use, and if the software is vulnerable, unsupported, or out of date."
+• Majority of web applications are built using open source or third-party components. 
+• Naturally, if the components that are used to build the web application are vulnerable, then the web app will be vulnerable as well 
+
+Prevention steps-
+• You need to know what your assets are. 
+• You should always have a complete and up-to-date list of all software components and their versions. 
+• You need to know if each component is vulnerable or not. You can do this by researching known vulnerabilities, as well as proactively testing your applications. 
+• You need to update software which is out of date, and you need to patch known vulnerabilities.
+
+Key-take-aways:
+• The most interesting thing about this vulnerability is that it's not really a technical problem, it's more of a people and process problem. 
+• The solution requires effective buy-in from stakeholders
+• A robust and repeatable process that covers asset inventory, vulnerability discovery, and remediation.
+
+7.Identification and Authentication Failures- 
+  OWASP says confirmation of the user's identity, authentication, and session management is critical to protect against authentication-related attacks. 
+Basically, a web app should confirm that you are who you say you are. 
+for example,
+• One type of failure- In a web application, this could happen during a forgot my password flow. Say I forget the password to one of my hundreds of online accounts and I click the button that says I forgot my password. At this point, a check is supposed to be done, like I have to type in a code that I get via an SMS in order to prove that I am who I claim to be so that I can get back into my account. The application needs to ask me for the code and verify that the code is correct. If either of these steps is skipped or done incorrectly, then that is considered an identification and authentication failure. 
+• Another type of failure is when the software communicates with a host that provides a certificate, but does not ensure that their certificate is actually associated with that host. This type of vulnerability is exploited by attackers who want to send their victims to a fake website. If the attacker can convince the web app that their host is legitimate by using a certificate that doesn't get validated, then the users could be sent to a fake, potentially malicious website. 
+• A third type is when a web app establishes a new user session without closing out the previous one. When a web app has this vulnerability, it does not invalidate the previous session before authenticating a new user. It's kind of like if you log onto your email from a computer in the library and then forget to log out before you leave. The next person who sits down may be able to access your account. 
+
+The common theme for this seventh item in the OWASP Top 10 is that web applications should identify users and authenticate them properly. Conceptually, it sounds so simple, right? In reality, it can be more complex for a variety of reasons.
+
+8.Software and Data Integrity Failures- 
+OWASP says, "An insecure CI/CD pipeline can introduce the potential for system compromise. 
+Many applications now include auto-update functionality, where updates are downloaded without sufficient verification." 
+The eighth item is actually a subset of the sixth, specifically, vulnerabilities that happen as a result of an insecure CI/CD pipeline. Modern software development processes like Agile, DevOps and CI/CD have changed the way that web applications are built. These processes are optimized for rapid iterative development, and naturally include a lot of automation. From a delivery side, this is great news, but from a security perspective, there's a potential problem. Sometimes the automated process takes something insecure and puts it into the software automatically, creating a security vulnerability. If automated processes are not subject to security validation, then the software is potentially vulnerable. 
+
+You might be wondering, why didn't the OWASP folks combine the sixth and the eighth into a single vulnerability category? it's because they really want to highlight and address the security risks involved in today's modern and pervasive approach to rapid and iterative software development. 
+
+Consider, You can think about making software in the same way. The raw ingredients that go into making the software, various plugins, libraries, et cetera, from sources like repositories and content delivery networks affect the quality and the security of the final software product. 
+
+The other key difference between the eighth, software and data integrity failures, and the sixth, vulnerable and outdated components, is that the eighth places additional emphasis on the fact that software applications often receive updates from the vendor.  
+
+Serialization is the process of taking a digital object and reformatting it for easy transport or storage. Deserialization is when you take that version and transform it back into the original object. 
+The key takeaway here is to be aware of automated processes in the software development life cycle, and to ensure that these are verified to be secure.
+
+9.Security Logging and Monitoring Failures- 
+OWASP says, "Without logging and monitoring, breaches cannot be detected." 
+At each step of the attack, logging and monitoring gives us an opportunity to stop the attacker in their tracks. 
+The UK National Cybersecurity Center in their Introduction to Logging for Security Purposes Guide has a useful table of questions that helps security practitioners design their logging and monitoring setups. 
+And some questions include: 
+• Who has viewed or downloaded a specific file? 
+• Have any incorrect authentication attempts occurred? Who has logged in recently? 
+• Have authentication events happened at unexpected times or from unexpected locations? 
+
+Logging, monitoring, and alerting allows for security and technology teams to discover that an attacker has infiltrated systems and ideally stop them before they can do more damage.
+
+10.Server Side Request Forgery (SSRF)-
+"SSRF flaws allow an attacker to coerce the application, to send a crafted request to an unexpected destination." 
+When SSRF is present in a web application, the attackers can send requests while pretending to be the victim server. Because the server is a trusted entity, these requests may result in access to sensitive, and administrative functions like internal API calls and database queries. 
+SSRF can occur when servers send requests to fetch external resources, this is a normal behavior. 
+For example, when a web app needs to display a graphic that is stored somewhere else. 
+However, to prevent SSRF, an only-allowed or not-allowed list should be enforced. 
+The key takeaway- 
+   ◇ when web applications are vulnerable to SSRF, attackers may be able to bypass regular access controls by masquerading as the server.
+
+

@@ -1,0 +1,156 @@
+#### SQLi
+https://portswigger.net/web-security/sql-injection    port swigger sqli learning module
+https://www.youtube.com/watch?v=wX6tszfgYp4 	port swigger sqli (video walkthrough) 
+https://www.youtube.com/watch?v=1nJgupaUPEQ	Over all sqli -by Rana Khalil 
+https://www.invicti.com/blog/web-security/sql-injection-cheat-sheet/    by Ferruh Mavituna blog (cheat sheet)
+https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/SQL%20Injection  by swisskyrepo/payloadsallthethings (cheat sheet)
+https://github.com/payloadbox/sql-injection-payload-list     (cheat sheet)
+https://owasp.org/www-community/attacks/SQL_Injection  (walkthough)
+https://sqlwiki.netspi.com/#mysql 
+https://www.w3schools.com/tags/ref_urlencode.asp 
+TRY HACK ME: labs 
+https://infosecwriteups.com/sql-injection-lab-tryhackme-writeup-fcf30f846e82 walkthrough 
+https://tryhackme.com/room/sqlinjectionlm
+https://tryhackme.com/room/sqlilab 
+ 
+
+  
+
+Sql Injection 
+When an attacker manages to insert or change the sql query by adding sql characters or sql code in an input vector of application then that application is definetily vulnerable to Sql injection. 
+ 	
+TYPES OF SQL INJECTION :
+   ◇ IN-Band (Classic)
+   ◇ Inferential (Blind) 
+   ◇ OUT-of-Band 
+ 
+   ◇ IN-Band (Classic)  
+      ▪ Error 
+      ▪ Union 
+    
+   ◇ IN-Band (Classic) 
+      ▪ Boolean 
+      ▪ Time 
+
+
+SQL injection examples
+• Retrieving hidden data, where you can modify an SQL query to return additional results.
+• Subverting application logic, where you can change a query to interfere with the application's logic.
+• UNION attacks, where you can retrieve data from different database tables.
+• Examining the database, where you can extract information about the version and structure of the database.
+• Blind SQL injection, where the results of a query you control are not returned in the application's responses
+
+Retrieving hidden data: 
+Vulnerability Exist in the WHERE clause of the query
+
+browser requests the URL: 
+https://insecure-website.com/products?category=Gifts 
+
+This causes the application to make an SQL query to retrieve details of the relevant products from the database: 
+(SQL query which runs behind this url)
+SELECT * FROM products WHERE category = 'Gifts' AND released = 1 
+
+all details (*), realesed=1, realesed=0 for the unrealesed objectives 
+
+Going further, an attacker can cause the application to display all the products in any category, including categories that they don't know about: 
+https://insecure-website.com/products?category=Gifts'+OR+1=1-- 
+     
+This results in the SQL query:              
+SELECT * FROM products WHERE category = 'Gifts' OR 1=1--' AND released = 1
+
+'+OR+1=1--    (In the url)
+
+*(double-dash sequence -- is a comment indicator in SQL) 
+  (pluse sequence + is a space indicator in SQL)
+  ('  is been converted to %27 in url)
+Subverting application logic:
+
+Username & Password field 
+administrator'--  (In username input field)
+
+
+Retrieving data from other database tables: 
+This is done using the UNION keyword, which lets you execute an additional SELECT query and append the results to the original query. 
+
+SELECT name, description FROM products WHERE category = 'Gifts'    (original query ) 
+
+then an attacker can submit the input: 
+' UNION SELECT username, password FROM users-- 
+
+
+SQL injection UNION attacks
+The UNION keyword lets you execute one or more additional SELECT queries and append the results to the original query. For example:
+SELECT a, b FROM table1 UNION SELECT c, d FROM table2
+
+This will cause the application to return all usernames and passwords along with the names and descriptions of products. 
+
+For a UNION query to work, two key requirements must be met:
+• The individual queries must return the same number of columns.
+• The data types in each column must be compatible between the individual queries.
+
+To carry out an SQL injection UNION attack, you need to ensure that your attack meets these two requirements. This generally involves figuring out:
+◇ How many columns are being returned from the original query?
+◇ Which columns returned from the original query are of a suitable data type to hold the results from the injected query?
+
+
+Determining the number of columns required in an SQL injection UNION attack
+
+ there are two effective methods to determine how many columns are being returned from the original query:
+• 1st Method: 
+ involves injecting a series of ORDER BY clauses and incrementing the specified column index until an error occurs.
+' ORDER BY 1-- 
+' ORDER BY 2-- 
+' ORDER BY 3-- 
+etc.
+This series of payloads modifies the original query to order the results by different columns in the result set. The column in an ORDER BY clause can be specified by its index, so you don't need to know the names of any columns. When the specified column index exceeds the number of actual columns in the result set, the database returns an error, such as
+
+The ORDER BY position number 3 is out of range of the number of items in the select list. 
+
+Error: Error return the database error in its HTTP response, or it might return a generic error, or simply return no results.
+(keep trying untill you get the http 200 response code) 
+
+• 2nd Method: 
+involves submitting a series of UNION SELECT payloads specifying a different number of null values:
+' UNION SELECT NULL--
+' UNION SELECT NULL,NULL--
+' UNION SELECT NULL,NULL,NULL--etc.
+If the number of nulls does not match the number of columns, the database returns an error, such as: 
+All queries combined using a UNION, INTERSECT or EXCEPT operator must have an equal number of expressions in their target lists. 
+
+Error:  return the database error in its HTTP response, or it might return a generic error, or simply return no results. Otherwise, the null values might trigger a different error, such as a NullPointerException. Worst case, the response might be indistinguishable from that which is caused by an incorrect number of nulls, making this method of determining the column count ineffective. 
+(keep trying untill you get the http 200 response code)
+
+• On Oracle, every SELECT query must use the FROM keyword and specify a valid table. There is a built-in table on Oracle called dual which can be used for this purpose. So the injected queries on Oracle would need to look like:
+' UNION SELECT NULL FROM DUAL--
+
+Finding columns with a useful data type in an SQL injection UNION attack:
+
+ The interesting data that you want to retrieve will be in string form, so you need to find one or more columns in the original query results whose data type is, or is compatible with, string data.
+ 
+Having already determined the number of required columns, you can probe each column to test whether it can hold string data by submitting a series of UNION SELECT payloads that place a string value into each column in turn. For example, if the query returns four columns, you would submit:
+' UNION SELECT 'a',NULL,NULL,NULL--
+' UNION SELECT NULL,'a',NULL,NULL--
+' UNION SELECT NULL,NULL,'a',NULL--
+' UNION SELECT NULL,NULL,NULL,'a'--
+If the data type of a column is not compatible with string data, the injected query will cause a database error, such as:
+Conversion failed when converting the varchar value 'a' to data type int.
+If an error does not occur, and the application's response contains some additional content including the injected string value, then the relevant column is suitable for retrieving string data.
+
+
+Using an SQL injection UNION attack to retrieve interesting data:
+• The original query returns two columns, both of which can hold string data.
+• The injection point is a quoted string within the WHERE clause.
+• The database contains a table called users with the columns username and password.
+
+In this situation, you can retrieve the contents of the users table by submitting the input:
+' UNION SELECT username, password FROM users--
+
+
+in the URL- 
+'+UNION+SELECT+username,+password+FROM+users-- 
+ 
+• Examining the database in SQL injection attacks
+
+ 
+
+
