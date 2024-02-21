@@ -1,0 +1,57 @@
+Web Checklist
+
+Content-Type- Charset-utf=6,7,8,9   
+user-agent- injection attacks 
+HTTP Methods
+Host injection - origin 
+Redirection 
+robots.txt 
+sitemap.xml 
+rate limit attack 
+input not sanitized  
+input validation
+URL mai injection- htlm, xss, sql 
+security headers CSP, HSTS, X-frame options, x-xss protection, X content type 
+error handling 
+Information disclosure
+using vulnerable components
+buffer overflow 
+clickjacking 
+cookie manupulation 
+cookie flags 
+auto complete 
+Response manupulation 
+session timeout 
+back button refresh 
+captcha bypass (bruteforce) 
+SSL and TLS weak ciphers 
+Obsolete TLS Enabled
+directory bruteforcing / listing
+about:cache --firefox browser 
+concurrent sessions 
+CORS 
+CSRF 
+CSV Injection 
+malicious File upload 
+Application uses cleartext traffic
+Business Logic Bypass
+Captcha not implemented
+Captcha expiration or same captcha is used
+website on HTTP 
+Default server page visible 
+Duplicate HTTP headers
+HTTPS is not implemented
+IDOR 
+Insecure permission
+Internal path disclosure
+Last logon date and time not displayed --Finance sites
+Misconfigured CSP header
+Misconfigured security headers 
+OTP Flooding 
+Password in Cleartext in Browser settings
+Password return in response
+Private IP addresses disclosed
+URL is accessible without authentication
+Rate limiting not implemented
+sensitive port open 
+website accessible through IP 
