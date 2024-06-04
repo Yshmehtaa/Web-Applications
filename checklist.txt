@@ -1,0 +1,220 @@
+#	API APPLICATION CHECKLIST	Tested Status
+1	Missing Authentication/Authorization Header	Yes
+2	Clear text submission of Password	N/A
+3	Http Methods Enable	Yes
+4	server Banner Disclosure	Yes
+5	username bruteforce	N/A
+6	Improper Error Handling	Yes
+7	Missing HTTP Security Header	Yes
+8	Rate-Limit not Implemented	Yes
+9	Weak Cipher	Yes
+10	server side validation for verification	Yes
+11	Personal Identifiable Information (PII)	Yes
+12	Vulnerable Version used	Yes
+13	Obsolete SSL TLS enabled	Yes
+14	Origin not Implemented	Yes
+15	Password submitted using get method	Yes
+16	Cookie Attributes not set	Yes
+17	username enumeration	Yes
+18	Internal Path disclosure	Yes
+19	Private IP disclosure	Yes
+20	Weak Authentication Mechanism 1	Yes
+21	Possible SQL injection	Yes
+22	Cache control not implemented properly	Yes
+23	Arbitrary Host trusted	Yes
+24	IDOR	Yes
+25	Replay Attack	Yes
+26	Basic Auth	Yes
+
+#	WEB APPLICATION CHECKLIST	Tested Status
+1	Cross Site Scripting: Reflected	Yes
+2	Cross Site Scripting: Stored	Yes
+3	SQL Injection Possible	Yes
+4	Cross Site Request Forgery (CSRF)	NA
+5	Weak Client Cache Management	NA
+6	Malicious File Upload	NA
+7	Unauthorized Access To Critical Functions Leading To Vertical/Horizontal Privilege Escalation	NA
+8	Clear Text Transmission of Authentication Details	Yes
+9	Session Fixation (Session Riding) Vulnerability	NA
+10	MIME Sniffing Attack	Yes
+11	Dangerous HTTP Methods Enabled on remote web server	Yes
+12	Obsolete Web Server version Used	Yes
+13	Replay Attack	Yes
+14	HTML Injection	Yes
+15	Parameter Manipulation Attack	Yes
+16	Invalidated URL Redirects	Yes
+17	Invalidated URL Forwards	Yes
+18	CRLF Injection/ HTTP Response Splitting attack	Yes
+19	XML External Entity Injection and XML Injection	Yes
+20	Parameter manipulation	Yes
+21	Phishing through iFrame	Yes
+22	Directory Listing Enabled on Remote Web Server	Yes
+23	Clickjacking Possible	Yes
+24	No Logout After Multiple Unsuccessful Password Change Attempts	NA
+25	Missing cookie attribute (i.e. HTTP Only and Secure Flags)	Yes
+26	SSL Self-Signed Certificate	Yes
+27	Password in browser memory	Yes
+28	SQL Injection disclosing database package details	Yes
+29	Sensitive parameters passed in GET URL	Yes
+30	CAPTCHA Replay Attack	Yes
+31	Stealing password via browser's refresh feature	Yes
+32	Server Default Pages Found	Yes
+33	Sensitive information revealed from Browser History	Yes
+34	Brute Force Attack	Yes
+35	Hardcoded Password	Yes
+36	Session not Invalidated on Logout	NA
+37	Improper Control of Interaction Frequency(Rate -Limit)	Yes
+38	LDAP Injection	Yes
+39	Insecure Password Change Module	Yes
+40	Sensitive Information in Browser Cache	Yes
+41	Basic Authentication Used	Yes
+42	SSL Weak/Medium Strength Cipher Suites Supported	Yes
+43	SSL Version 2 (v2) Protocol Detection	Yes
+44	Vulnerable Password Reset Feature	Yes
+45	Account Lockout Attack	Yes
+46	Directory Traversal	Yes
+47	The application is vulnerable to a remote file inclusion flaw (RFI)	NA
+48	The application is vulnerable to a Local file inclusion flaw (LFI)	NA
+49	Source Code Disclosure	Yes
+50	Improper Error handling May Lead To Sensitive Information Disclosure	Yes
+51	Passing Too Many Parameters In URL	Yes
+52	Weak Input Data Validation	Yes
+53	Server banner disclosure in response header	Yes
+54	Password 'Auto-complete' Enabled	Yes
+55	Email ID Harvesting Possible	Yes
+56	TRACE method is enabled on the remote server	Yes
+57	Username Enumeration	Yes
+58	Weak Password Complexity	NA
+59	Session Timeout not implement properly	NA
+60	Bypassing ‘Change Password’ Functionality	Yes
+61	Absolute Path Disclosure	Yes
+62	No Password Change Facility For User	Yes
+63	Admin Login Page Found	Yes
+64	Session Id/Token Passed In URL or in Get Request	Yes
+65	Post Login Functionality Disclosure	Yes
+66	CSRF Token Value Remains Same Throughout Session	NA
+67	SharePoint Troubleshooting interface disclosure	NA
+68	HTTP Verb Tampering	Yes
+69	Robots.txt Information Disclosure	Yes
+70	Multiple Login Allowed (concurrent Session)	NA
+71	Sensitive Information Stored in Cookie	Yes
+72	SSL Certificate Expiry	Yes
+73	Internal IP Disclosure through HTTP Header	Yes
+74	Session is not terminated on web browser window close events	NA
+75	Unencrypted _VIEWSTATE Parameter	Yes
+76	Logout Button not Implemented	Yes
+77	PII Information in Plain text	Yes
+78	SSRF	Yes
+79	Application accessible through IP	Yes
+80	server side validation	Yes
+81	Insecure Direct Object References (IDOR)	Yes
+82	Missing HTTP Security Header	Yes
+83	Insecure Deserialization	Yes
+84	Using Components with known vulnerabilities	Yes
+85	Arbitrary Origin Allowed(CORS)	Yes
+86	Session Hijacking	NA
+87	Post to Get method conversion allowed for sensitive Data	Yes
+88	Command injection Attack	Yes
+89	SMTP/IMAP Injection	Yes
+90	RCE(Remote control execution)	Yes
+91	XPath Injection attacks	Yes
+92	SSTI(Server Side Template Injection)	Yes
+93	NoSQL Injection	Yes
+94	ccs injection	Yes
+95	Internal pages Accessible without Authentication	Yes
+96	Last Login Information (Critical Application)	Yes
+97	DOM XSS	Yes
+98	Critical Open Ports	Yes
+99	DOS	NA
+100	CAPTCHA not Implemented	Yes
+101	CAPTCHA Bypass	Yes
+102	OTP Bypass	Yes
+103	Weak Encryption/Encoding used for sensitive Details	Yes
+104	Broken Authentication	Yes
+105	Buffer overflow	NA
+106	Default Credentials	Yes
+107	Insecure Transport(using HTTP)	Yes
+
+#	MOBILE APPLICATION CHECKLIST	Tested Status
+1	allow Backup is set to true	Yes
+2	Sensitive information in source code	Yes
+3	Content Providers Access Permissions	Yes
+4	Content Providers SQL Injection	Yes
+5	Sensitive information in cleartext stored in local storage: SQLite, shared preference, internal storage, external storage, data directory or data is exposed via content provider	Yes
+6	Sensitive information in cleartext in volatile memory	Yes
+7	Bypassing Certificate SSL Pinning	Yes
+8	SSL/TLS Known Issues – CRIME, BREACH, BEAST, Lucky13, RC4,etc	Yes
+9	Disable certificate validation	Yes
+10	HTTPS is not implemented	Yes
+11	Sensitive details transmitted in URL	Yes
+12	Deprecated SSL/TLS Version is Supported	Yes
+13	Weak SSL ciphers supported	Yes
+14	Application accepts blank password	Yes
+15	Application accepts Partial password	Yes
+16	Check for offline authentication	Yes
+17	No authentication on background app resume	Yes
+18	Local Authentication Bypass	Yes
+19	Weak MPIN policy	Yes
+20	No Anti-automation mechanism implemented (Token/lockout/CAPTCHA)	Yes
+21	2 Factor authentication is not implemented on critical functionality	Yes
+22	Password replay attack	Yes
+23	No lockout policy implemented on failed number of logins	Yes
+24	No lockout set on old password in change password functionality	Yes
+25	No password policy set	Yes
+26	MPIN not verified at server end	Yes
+27	No lockout on Mpin	Yes
+28	Hint question brute forced on forgot password	Yes
+29	Hint question/answer transmitted in cleartext	Yes
+30	Old password accepted even after forget password	Yes
+31	Credentials transmitted in cleartext	Yes
+32	Sensitive info like card details/Mpin/PAN numbers sent in cleartext.	Yes
+33	Insecure password reset mechanism	Yes
+34	Bypassing login via XML injection	Yes
+35	missing session cookie attributes	Yes
+36	Insecure Forgot password implemented	Yes
+37	Insecure Reset password implemented	Yes
+38	Second factor authentication / OTP can be bypassed	Yes
+39	Second factor authentication / OTP can be brute forced	Yes
+40	Logout functionality not implemented	Yes
+41	Hardcoded encryption key	Yes
+42	Cryptographic Based Storage Strength	Yes
+43	Weak key generation logic	Yes
+44	An adversary can hijack user sessions by session fixation.	Yes
+45	Parameter manipulation	Yes
+46	Privilege escalation via parameter manipulation	Yes
+47	Privilege escalation via URL manipulation	Yes
+48	Maker-Checker functionality bypass via parameter manipulation	Yes
+49	Client side Input validation not implemented	Yes
+50	Autocomplete should be OFF for sensitive information	Yes
+51	Is the mobile application accessible over web browser	Yes
+52	Application runs on rooted/jailbroken phones	Yes
+53	Developer comments revealed in source code	Yes
+54	Bypassing login via SQL injection	Yes
+55	Bypassing login via LDAP/XPATH injection	Yes
+56	File Manipulation / Malicious file upload	Yes
+57	No source code obfuscation implemented / Partial source code obfuscation implemented	Yes
+58	Sensitive info/Business logic exposed/	Yes
+59	hidden backdoor/Gap left by the developer	Yes
+60	Last login time and recent transactions not shown after login	Yes
+61	Multiple logins enabled	Yes
+62	Missing useful HTTP Security headers	Yes
+63	HTTP dangerous methods enabled	Yes
+64	Device level check bypass	Yes
+65	CSRF	Yes
+66	UI Spoofing / Tap jacking	Yes
+67	Business Logic flaws / Application accept negative value	Yes
+68	Sensitive web service URL exposed in request/response	Yes
+69	Session management	Yes
+70	Session hijacking	Yes
+71	Session id doesn't change after login and post logout	Yes
+72	No session timeout / longer session timeout duration	Yes
+73	Invalidated redirects	Yes
+74	Remote file inclusion flaw	Yes
+75	Local file Inclusion flaw	Yes
+76	Keyboard caching is not disabled	Yes
+77	Internal ip address/ path disclosed in responses	Yes
+78	Server banner in HTTP headers	Yes
+79	Enumerate valid usernames on login page	Yes
+80	Default web page is accessible	Yes
+81	Application level logging is not disabled	Yes
+82	Error page reveals sensitive information	Yes
