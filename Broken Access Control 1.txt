@@ -1,0 +1,58 @@
+Broken Access Control 
+
+Terminologies 
+1. Authentication  
+2. Session Management 
+3. Broken Access Control
+
+Authentication: Identifies the user and confirms that they say who they say they are. 
+ 
+Session Management: Identifies which subsequent HTTP requests are being made by each user. 
+
+Access Control: Determines whether the user is allowed to carry out the action that they are attempting to perform.  
+
+Different types of Access Control:
+
+1) Vertical Access control:  Is used to restrict acccess to functions not available for other users in the organization. 
+
+2) Horizontal Access control: enables different users to access similar resources types. 
+
+3) Context-Dependent Access Control: restricts access to functionality and resources based on the state of the application or the user's interaction with it. 
+
+
+Broken Access Control vulnerabilties: 
+
+Description: Arise when users can act outside of their intended permissions.   
+
+Impact: This typically leads to sensitive information disclosure, unauthorized access and modification or destruction of data. 
+
+Severity: Critical/High   
+
+Bypassing Access control checks by 
+1. modifying params in the URL 
+2. modifying params in the HTML page
+3. Accessing the API with missing access control on the POST, PUT and DELETE methods 
+4. Manupulating metadata, such as replaying or tampering with JSON web Tokens (JWT) or a cookie 
+5. Expoliting CORS misconfiguration that allow API access from unauthorized/ untrusted origins. 
+6. Force browsing authenticated pages as an authenticated user. 
+
+Use the Extension in Burp called "Authorize" to check if the Broken Access Control is present or not. 
+
+Solution/Prevention: 
+
+• Use a security-centric design where access is verified first and ensure all 
+requests go through an access control check. 
+• Except for public resources, deny access by default. 
+• Apply the principal of least privilege throughout the entire application. 
+• Consider using attribute or feature-based access control checks instead of 
+role-based access control. 
+• NIST Attribute Based Access Control 
+https://www.youtube.com/watch?v=cgTa7YnGfHA&ab_channeI=NationaIInstituteof 
+StandardsandTechnoIogy 
+• NIST Special Publication 800-162: 
+https://nvIpubs.nist.gov/nistpubs/speciaIpubIications/NIST.sp.800-162.pdf 
+• Access control checks should always be performed on the server side. 
+ 
+
+
+ 
