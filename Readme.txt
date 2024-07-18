@@ -18,4 +18,3 @@ API:-
 
 https://www.ideadrops.info/post/cat-grep-cut-sort-uniq-sed-with-powershell
 
-Adhoc | Appsec Report | ML LAP Portal | API | Greybox | UAT | NR-7336 | INITAL
