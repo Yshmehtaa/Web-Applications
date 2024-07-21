@@ -1,5 +1,0 @@
-/test.aspx
-borwser memory dump for passwords
-clear text passwords
-
-CSRF
