@@ -1,3 +1,6 @@
+
+https://us06web.zoom.us/j/85966910847?pwd=nRBlJAb8R2rKH9PAZUMkRGPRzSbhwP.1
+
 Mobile:-
 https://github.com/tanprathan/MobileApp-Pentest-Cheatsheet
 https://github.com/ivan-sincek/android-penetration-testing-cheat-sheet
