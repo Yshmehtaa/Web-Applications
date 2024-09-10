@@ -1,3 +1,9 @@
+Install Katana from the following website: 
+https://medium.com/@sherlock297/katana-framework-how-to-use-it-to-scan-and-mass-collect-website-data-107f5ae326e0 
+
+echo https://www.adyen.com | katana | grep -E "\.(xls|xml|xlsx|json|pdf|sql|doc|docx|pptx|txt|zip|tar\.gz|tgz|bak|7z|rar|log|cache|secret|db|backup|yml|gz|config|csv|yaml|md|md5|tar|xz|7zip|p12|pem|key|crt|csr|sh|pl|py|java|class|jar|war|ear|sqlitedb|sqlite3|dbf|db3|accdb|mdb|sqlcipher|gitignore|env|ini|conf|properties|plist|cfg)$"
+echo https://www.adyen.com | katana | grep -E "\.xls|\.xml|\.xlsx|\.json|\.pdf|\.sql|\.doc|\.docx|\.pptx|\.txt|\.zip|\.tar\.gz|\.tgz|\.bak|\.7z|\.rar|\.log|\.cache|\.secret|\.db|\.backup|\.yml|\.gz|\.config|\.csv|\.yaml|\.md|\.md5"
+
 It is recommended to remove duplicate http headers. Also implement all useful security headers as this is a primary defense against high severity attacks.
 
 Please Remove Duplicate HTTP header:-
