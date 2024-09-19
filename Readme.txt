@@ -1,3 +1,19 @@
+Exposure of AES Encryption Key in Source Code
+Description 
+During the assessment of the INSTA DOC APPLICATION 's login functionality, it was observed that the sensitive encryption keys are hardcoded stored in plaintext within the application's codebase which is compromising the security of encrypted data. 
+
+impact 
+Attackers can easily access the encryption key by analyzing the application's source code. With access to the key, they can decrypt sensitive data encrypted using AES encryption algorithms. This exposes confidential information, such as user credentials, personal details, and financial data, to unauthorized access and potential theft 
+
+Solution 
+To address this vulnerability, implement the following:
+Implement robust key management practices to safeguard AES encryption keys. Store keys in secure, encrypted storage repositories or key management systems that enforce strong access controls and auditing mechanisms. 
+
+good reads 
+https://cwe.mitre.org/data/definitions/310.html 
+
+
+
 Install Katana from the following website: 
 https://medium.com/@sherlock297/katana-framework-how-to-use-it-to-scan-and-mass-collect-website-data-107f5ae326e0 
 
