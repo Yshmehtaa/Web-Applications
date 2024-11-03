@@ -1,0 +1,12 @@
+SAML Bypassing techquies
+
+
+https://docs.oasis-open.org/security/ --old docs
+https://cheatsheetseries.owasp.org/cheatsheets/SAML_Security_Cheat_Sheet.html  --mitigation 
+
+Golden saml attack. 
+
+https://www.orangecyberdefense.com/global/blog/cloud/exploring-the-golden-saml-attack-against-adfs    
+https://www.netwrix.com/golden_saml_attack.html
+https://www.secureworks.com/blog/going-for-the-gold-penetration-testing-tools-exploit-golden-saml
+https://www.sygnia.co/threat-reports-and-advisories/golden-saml-attack/ 
