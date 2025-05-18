@@ -1,0 +1,8 @@
+References related to web shells- 
+
+https://github.com/xl7dev/WebShell
+https://github.com/Wphackedhelp/PHP-backdoors 
+https://github.com/tutorial0/WebShell 
+https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Upload%20Insecure%20Files/README.md#upload-tricks 
+https://github.com/tutorial0/WebShell 
+
