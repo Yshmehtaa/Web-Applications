@@ -1,0 +1,10 @@
+New Kali just runs the tools on virtal environment 
+
+Just like docker the kali also instal external requirements on the virtual environment 
+
+
+Use the following code if you Kali is not running the tools, after installing the dependences run the tool
+└─# source venv/bin/activate 
+                                                                                                                                                                                                                   
+└─# pip install -r requirements.txt 
+ 
