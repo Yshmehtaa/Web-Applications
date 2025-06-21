@@ -1,0 +1,15 @@
+POST /get_logo HTTP/1.1
+Host: 65.2.182.45
+Content-Length: 92
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.5112.102 Safari/537.36
+X-CSRFToken: IjBkYTIyZDYyOTAxYmUyZTljMzYwYWNiNTc5ZjA5NzY5ZDdjZDNhMzYi.aFaYQg.EUTzJyyUER3BBN6X0VHy2qdd7s4
+Content-Type: application/json
+Accept: */*
+Origin: http://65.2.182.45
+Referer: http://65.2.182.45/
+Accept-Encoding: gzip, deflate
+Accept-Language: en-US,en;q=0.9
+Cookie: session=eyJfZnJlc2giOmZhbHNlLCJjc3JmX3Rva2VuIjoiMGRhMjJkNjI5MDFiZTJlOWMzNjBhY2I1NzlmMDk3NjlkN2NkM2EzNiJ9.aFaYPQ.XqKbVReZXZ7QMaJzBcNpn2gZvjU; csrf_token=IjBkYTIyZDYyOTAxYmUyZTljMzYwYWNiNTc5ZjA5NzY5ZDdjZDNhMzYi.aFaYQg.EUTzJyyUER3BBN6X0VHy2qdd7s4
+Connection: close
+
+{"image_url":"https://redfoxsec.com/wp-content/uploads/2024/07/logo-in-white-1024x1024.png"}
