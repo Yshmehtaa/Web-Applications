@@ -69,9 +69,10 @@ https://gowthamr1.medium.com/android-ssl-pinning-bypass-using-objection-and-frid
 Website:-
 
 API:-
-
-
 ======================================================
 
 https://www.ideadrops.info/post/cat-grep-cut-sort-uniq-sed-with-powershell
 
+
+Download the extension -- https://chromewebstore.google.com/detail/user-agent-switcher/dbclpoekepcmadpkeaelmhiheolhjflj 
+User-Agent Switcher extension to the applications which are not able to run on the specific browser. 
