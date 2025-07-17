@@ -76,3 +76,14 @@ https://www.ideadrops.info/post/cat-grep-cut-sort-uniq-sed-with-powershell
 
 Download the extension -- https://chromewebstore.google.com/detail/user-agent-switcher/dbclpoekepcmadpkeaelmhiheolhjflj 
 User-Agent Switcher extension to the applications which are not able to run on the specific browser. 
+
+
+if the CSP Headaer has added different tags and while removing it changes the layout of the application: 
+To log blocked resources for debugging, you can add a reporting URL:
+<add name="Content-Security-Policy" value="
+    default-src 'self';
+    report-uri /csp-violation-report;
+"/>
+
+
+
