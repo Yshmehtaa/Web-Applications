@@ -85,5 +85,18 @@ To log blocked resources for debugging, you can add a reporting URL:
     report-uri /csp-violation-report;
 "/>
 
+| Header                                               | Description                                                    | Impact if Missing                               | Recommended Value                                                                        |
+| ---------------------------------------------------- | -------------------------------------------------------------- | ----------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| **Strict-Transport-Security (HSTS)**                 | Forces HTTPS for future requests                               | Allows SSL stripping attacks                    | `Strict-Transport-Security: max-age=31536000; includeSubDomains; preload`                |
+| **Content-Security-Policy (CSP)**                    | Controls sources of content to prevent XSS and injection       | Enables XSS, code injection                     | `Content-Security-Policy: default-src 'self'; script-src 'self'` *(customize as needed)* |
+| **X-Content-Type-Options**                           | Prevents MIME type sniffing                                    | Browser may execute malicious files incorrectly | `X-Content-Type-Options: nosniff`                                                        |
+| **X-Frame-Options**                                  | Prevents clickjacking by controlling iframe embedding          | Application can be embedded in malicious sites  | `X-Frame-Options: DENY` or `SAMEORIGIN`                                                  |
+| **Referrer-Policy**                                  | Controls information shared in the Referer header              | Sensitive URLs may be leaked                    | `Referrer-Policy: no-referrer` or `strict-origin-when-cross-origin`                      |
+| **Permissions-Policy** *(previously Feature-Policy)* | Limits access to browser features (e.g., camera, microphone)   | Browser features may be exploited               | `Permissions-Policy: camera=(), microphone=(), geolocation=()`                           |
+| **X-XSS-Protection** *(deprecated)*                  | Enabled browser's XSS filter (obsolete)                        | Allows reflected XSS (older browsers only)      | `X-XSS-Protection: 1; mode=block` *(optional)*                                           |
+| **Cross-Origin-Opener-Policy (COOP)**                | Isolates browsing contexts to prevent cross-origin attacks     | Possible cross-origin leaks                     | `Cross-Origin-Opener-Policy: same-origin`                                                |
+| **Cross-Origin-Embedder-Policy (COEP)**              | Prevents loading of cross-origin resources unless CORS-enabled | Data leaks from external resources              | `Cross-Origin-Embedder-Policy: require-corp`                                             |
+| **Cross-Origin-Resource-Policy (CORP)**              | Restricts who can load resources                               | May allow third-party scraping or theft         | `Cross-Origin-Resource-Policy: same-origin`                                              |
+
 
 
