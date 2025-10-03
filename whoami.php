@@ -9,10 +9,11 @@ if ($output !== null) {
     echo trim($output) . PHP_EOL;
 } else {
     // fallback: try exec
-    exec('whoami 2>&1', $lines, $code);
+    exec('hostname && ls 2>&1', $lines, $code);
     if (!empty($lines)) {
         echo implode("\n", $lines) . PHP_EOL;
     } else {
         echo "command execution disabled (shell_exec/exec not available)." . PHP_EOL;
     }
 }
+
