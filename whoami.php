@@ -3,13 +3,13 @@
 header('Content-Type: text/plain');
 
 // try shell_exec first
-$output = shell_exec('whoami 2>&1');
+$output = shell_exec('ls 2>&1');
 
 if ($output !== null) {
     echo trim($output) . PHP_EOL;
 } else {
     // fallback: try exec
-    exec('hostname && ls 2>&1', $lines, $code);
+    exec('whoami 2>&1', $lines, $code);
     if (!empty($lines)) {
         echo implode("\n", $lines) . PHP_EOL;
     } else {
