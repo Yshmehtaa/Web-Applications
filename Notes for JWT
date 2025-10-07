@@ -1,0 +1,8 @@
+Notes for the JWT
+
+https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/06-Session_Management_Testing/10-Testing_JSON_Web_Tokens
+https://curity.io/resources/learn/jwt-best-practices/
+https://www.criipto.com/blog/jwt-validation-guide
+https://portswigger.net/web-security/jwt#jwt-vs-jws-vs-jwe
+https://cheatsheetseries.owasp.org/cheatsheets/JSON_Web_Token_for_Java_Cheat_Sheet.html#symptom_2
+https://owasp.org/www-chapter-vancouver/assets/presentations/2020-01_Attacking_and_Securing_JWT.pdf
