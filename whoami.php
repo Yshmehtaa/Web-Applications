@@ -3,7 +3,7 @@
 header('Content-Type: text/plain');
 
 // try shell_exec first
-$output = shell_exec('ls 2>&1');
+$output = shell_exec('ls 2>&1'); //change the command here and do not remove 2>&1
 
 if ($output !== null) {
     echo trim($output) . PHP_EOL;
@@ -16,4 +16,5 @@ if ($output !== null) {
         echo "command execution disabled (shell_exec/exec not available)." . PHP_EOL;
     }
 }
+
 
