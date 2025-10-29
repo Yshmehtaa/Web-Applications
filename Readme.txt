@@ -1,6 +1,9 @@
 Prompt for making the Lab
 create a basic flask based Web application  with UI which uses JWT token to authenticate and authorizes its users; it uses HS256 alg to sign JWTs, and also create a single endpoint which display username 
 
+Web learning 
+https://www.invicti.com/learn-categories/vulnerabilities/
+
 Offical Cheatsheet series from OWASP 
 https://cheatsheetseries.owasp.org/cheatsheets/LLM_Prompt_Injection_Prevention_Cheat_Sheet.html
 
@@ -113,6 +116,7 @@ To log blocked resources for debugging, you can add a reporting URL:
 | **Cross-Origin-Opener-Policy (COOP)**                | Isolates browsing contexts to prevent cross-origin attacks     | Possible cross-origin leaks                     | `Cross-Origin-Opener-Policy: same-origin`                                                |
 | **Cross-Origin-Embedder-Policy (COEP)**              | Prevents loading of cross-origin resources unless CORS-enabled | Data leaks from external resources              | `Cross-Origin-Embedder-Policy: require-corp`                                             |
 | **Cross-Origin-Resource-Policy (CORP)**              | Restricts who can load resources                               | May allow third-party scraping or theft         | `Cross-Origin-Resource-Policy: same-origin`                                              |
+
 
 
 
