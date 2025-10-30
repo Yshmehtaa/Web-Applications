@@ -76,8 +76,6 @@ Please Remove Duplicate HTTP header:-
 13.Access-Control-Allow-Credentials: false
 
 
-https://us06web.zoom.us/j/85966910847?pwd=nRBlJAb8R2rKH9PAZUMkRGPRzSbhwP.1
-
 Mobile:-
 https://github.com/tanprathan/MobileApp-Pentest-Cheatsheet
 https://github.com/ivan-sincek/android-penetration-testing-cheat-sheet
@@ -120,6 +118,7 @@ To log blocked resources for debugging, you can add a reporting URL:
 | **Cross-Origin-Opener-Policy (COOP)**                | Isolates browsing contexts to prevent cross-origin attacks     | Possible cross-origin leaks                     | `Cross-Origin-Opener-Policy: same-origin`                                                |
 | **Cross-Origin-Embedder-Policy (COEP)**              | Prevents loading of cross-origin resources unless CORS-enabled | Data leaks from external resources              | `Cross-Origin-Embedder-Policy: require-corp`                                             |
 | **Cross-Origin-Resource-Policy (CORP)**              | Restricts who can load resources                               | May allow third-party scraping or theft         | `Cross-Origin-Resource-Policy: same-origin`                                              |
+
 
 
 
