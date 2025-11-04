@@ -13,3 +13,27 @@ https://book.hacktricks.wiki/en/pentesting-web/hacking-jwt-json-web-tokens.html
 https://github.com/ticarpi/jwt_tool/wiki/Attack-Methodology
 
 
+
+Prepare for the Foxxcon
+JWT Token Exploitation course- 
+
+Introduction to the JWT, why we use the JWT and the difference between session cookies and Tokens 
+
+Why JWT tokens came into implementation
+Rising security concern for JWT 
+
+why tokens are been used 
+what is JWK, JKU and Kid -- inside that what are the other parameters 
+
+symmetric and asymmetric keys 
+
+read about the algorithms:
+HS256, RS256, ES256
+
+Read about the CVE released for the JWT.
+different kind of vulnerability 
+
+what is the algorithm confusion attack 
+also read what we are doing by creating a "New RSA Key" or "New Symmetric key" when we are already getting the Public key then what exactly we are doing by using the "New RSA Key" 
+
+Implementation or solution for each. 
