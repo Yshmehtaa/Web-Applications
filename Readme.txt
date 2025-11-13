@@ -1,3 +1,8 @@
+Good Payload list for Path Traversal and Directory enumeration
+https://github.com/omurugur/Path_Travelsal_Payload_List/tree/master/Payload
+
+
+
 Good read for Oauth 
 https://salt.security/blog/oh-auth-abusing-oauth-to-take-over-millions-of-accounts
 
@@ -122,6 +127,7 @@ To log blocked resources for debugging, you can add a reporting URL:
 | **Cross-Origin-Opener-Policy (COOP)**                | Isolates browsing contexts to prevent cross-origin attacks     | Possible cross-origin leaks                     | `Cross-Origin-Opener-Policy: same-origin`                                                |
 | **Cross-Origin-Embedder-Policy (COEP)**              | Prevents loading of cross-origin resources unless CORS-enabled | Data leaks from external resources              | `Cross-Origin-Embedder-Policy: require-corp`                                             |
 | **Cross-Origin-Resource-Policy (CORP)**              | Restricts who can load resources                               | May allow third-party scraping or theft         | `Cross-Origin-Resource-Policy: same-origin`                                              |
+
 
 
 
