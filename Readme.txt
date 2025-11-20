@@ -1,3 +1,8 @@
+For CSV Injection to be executed make the following changes in your execel - then you can perform it on both .xlsx and .csv files
+In excel -> Navigate to Files -> Options -> Trust Center -> Trust Center settings -> External Content -> Under "security settings for dynamic data exchange" -> Select "Enable Dynamic Data Exchange Server Launch" -> save the chnages.
+
+
+
 Good Payload list for Path Traversal and Directory enumeration
 https://github.com/omurugur/Path_Travelsal_Payload_List/tree/master/Payload
 
@@ -128,6 +133,7 @@ To log blocked resources for debugging, you can add a reporting URL:
 | **Cross-Origin-Opener-Policy (COOP)**                | Isolates browsing contexts to prevent cross-origin attacks     | Possible cross-origin leaks                     | `Cross-Origin-Opener-Policy: same-origin`                                                |
 | **Cross-Origin-Embedder-Policy (COEP)**              | Prevents loading of cross-origin resources unless CORS-enabled | Data leaks from external resources              | `Cross-Origin-Embedder-Policy: require-corp`                                             |
 | **Cross-Origin-Resource-Policy (CORP)**              | Restricts who can load resources                               | May allow third-party scraping or theft         | `Cross-Origin-Resource-Policy: same-origin`                                              |
+
 
 
 
